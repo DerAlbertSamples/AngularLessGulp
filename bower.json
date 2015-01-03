@@ -14,5 +14,21 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "angular": "~1.3.8",
+    "angular-route": "~1.3.8",
+    "bootstrap": "~3.3.1"
+  },
+  "overrides" : {
+    "jquery" : {
+      "main" : ".ignore"
+    },
+    "bootstrap" : {
+      "main" : [ 
+      "dist/css/bootstrap.css",
+      "dist/css/bootstrap-theme.css",
+      "dist/fonts/*"]
+    }
+  }
 }
