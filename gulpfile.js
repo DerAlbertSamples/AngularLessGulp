@@ -10,6 +10,7 @@ var browserSync = require('browser-sync');
 var ngAnnotate = require('gulp-ng-annotate');
 var sync = require('gulp-sync');
 var del = require('del');
+var util = require('gulp-util');
 
 var config = {
 	'site' : './source',
@@ -89,9 +90,28 @@ gulp.task('compile-ts', function() {
     .pipe(gulp.dest(config.app));
 });
 
+gulp.task('watch-ts', ['compile-ts'], function() {
+	var watcher = gulp.watch("**/*.ts", { cwd : config.app }, ['compile-ts']);
+     watcher.on('change', function (e) {
+        if (e.type == "deleted") {
+        	var file = util.replaceExtension(e.path, ".*");
+        	del(file);
+        }
+    });
+});
+
 gulp.task('compile-less', function() {
 	 return gulp.src(path.join(config.site, "**/*.less"), {base: config.site})
     .pipe(less())
     .pipe(gulp.dest(config.site));
+});
 
+gulp.task('watch-less', ['compile-less'], function() {
+	var watcher = gulp.watch("**/*.less", { cwd : path.join(config.site, "css") }, ['compile-less']);
+     watcher.on('change', function (e) {
+        if (e.type == "deleted") {
+        	var file = util.replaceExtension(e.path, ".*");
+        	del(file);
+        }
+    });
 });

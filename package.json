@@ -18,6 +18,7 @@
     "gulp-ng-annotate": "^0.4.3",
     "gulp-sync": "^0.1.4",
     "gulp-typescript": "^2.3.0",
+    "gulp-util": "^3.0.1",
     "main-bower-files": "^2.4.1"
   }
 }
