@@ -12,6 +12,6 @@ Show Gulp-Taks for
   * inject JavaScript, CSS files to HTML -> inject
   * reload page on JavaScript and HTML changes -> brower-sync
   * refresh CSS on Page on changes -> browser-sync
-  * run unit-tests -> karma
+
 
 
