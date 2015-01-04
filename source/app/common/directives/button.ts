@@ -54,7 +54,7 @@ module directives {
     }
 
 
-    angular.module('da.directives.buttons', [])
+    angular.module('da.directives.button', [])
         .directive('button', buttonDirective)
         .directive('input', inputButtonDirective);
 }

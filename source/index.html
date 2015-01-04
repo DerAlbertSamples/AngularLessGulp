@@ -1,4 +1,4 @@
-<html>
+<html ng-app="MyApp" ng-strict-di>
 <head>
 	<!-- assets:css -->
     <link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap.css">
@@ -9,11 +9,20 @@
     <!-- endinject -->
 </head>
 <body>
+<div>
+<button>Ein Button</button>
+<button type="submit">Ein Button</button>
+<a level="warning" button href="#/home">Go Home</a>
+
+<ng-view />
+</div>
 	<!-- assets:js -->
     <script src="/assets/angular/angular.js"></script>
     <script src="/assets/angular-route/angular-route.js"></script>
     <!-- endinject -->
     <!-- app:js -->
+    <script src="/app/common/directives.js"></script>
+    <script src="/app/common/directives/button.js"></script>
     <script src="/app/modules/home/home.js"></script>
     <script src="/app/app.js"></script>
     <!-- endinject -->

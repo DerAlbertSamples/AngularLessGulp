@@ -1,7 +1,7 @@
 AngularLessGulp
 ===============
 
-Sample-Code für http://blog.der-albert.com/entwicklungs-workflow-angular-typescript-und-less-mit-gulp
+Sample-Code für http://blog.der-albert.com/entwicklungs-workflow-angular-typescript-und-less-mit-gulp (folgt)
 
 
 Show Gulp-Taks for
