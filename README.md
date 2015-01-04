@@ -4,7 +4,7 @@ AngularLessGulp
 Sample-Code für http://blog.der-albert.com/entwicklungs-workflow-angular-typescript-und-less-mit-gulp (folgt)
 
 
-Show Gulp-Taks for
+Gulp-Tasks for a Development Workflow for Angular JS, Typescript, Less and Gulp
 
   * converting Typescript to Javascript -> typescript
   * annotate JavaScript with Angular Annotation for Dependency Injection -> ngAnnotate
@@ -12,6 +12,7 @@ Show Gulp-Taks for
   * inject JavaScript, CSS files to HTML -> inject
   * reload page on JavaScript and HTML changes -> brower-sync
   * refresh CSS on Page on changes -> browser-sync
+
 
 
 
