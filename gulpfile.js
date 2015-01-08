@@ -40,15 +40,10 @@ gulp.task('clean-assets', function(cb) {
 	del([path.join(config.assets,"**/*")], cb);
 })
 
-gulp.task('copy-assets', ['clean-assets'], function() {
-	return gulp.src(mainBowerFiles(),{
-		'base': config.bower_components
-	})
-	.pipe(gulp.dest(config.assetsDir));
-});
 
 gulp.task('copy-assets', ['clean-assets'], function() {
-	return gulp.src(mainBowerFiles(), { 'base': config.bowerComponents })
+	return gulp.src(mainBowerFiles(), 
+		{ 'base': config.bowerComponents })
 	.pipe(gulp.dest(config.assets));
 });
 
@@ -78,13 +73,13 @@ gulp.task('inject-files', function() {
 var tsProject = typescript.createProject(config.typescript);
 gulp.task('compile-ts', function() {
 
-	var result = gulp.src([
+	var typescriptFiles = [
 		path.join(config.app, "**/*.ts"),
 		path.join(config.typings, "**/*.ts")
-		])
-	.pipe(typescript(tsProject));
+		];
 
-	return result
+	return gulp.src(typescriptFiles)
+	.pipe(typescript(tsProject))
 	.pipe(ngAnnotate())
 	.pipe(gulp.dest(config.app));
 });
